@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
+var separacao = lines.shift().split(" ");
+var A = Number(separacao.slice(0, -2));
+var B = Number(separacao.slice(1, -1));
+var C = Number(separacao.slice(-1));
+var pi = 3.14159;
+console.log(`TRIANGULO: ${(A*C/2).toFixed(3)} `);
+console.log(`CIRCULO: ${(pi*C**2).toFixed(3)} `);
+console.log(`TRAPEZIO: ${((A+B)*C/2).toFixed(3)} `);
+console.log(`QUADRADO: ${(B**2).toFixed(3)} `);
+console.log(`RETANGULO: ${(A*B).toFixed(3)} `);
